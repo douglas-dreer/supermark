@@ -7,13 +7,13 @@ import jakarta.transaction.Transactional
 import org.springframework.stereotype.Service
 
 @Service
-open class CreateProductUseCase(
+class CreateProductUseCase(
     private val productValidator: ProductValidator,
     private val productRepository: ProductRepositoryPort,
 ) {
 
     @Transactional
-    open fun execute(product: ProductDTO): ProductDTO {
+    fun execute(product: ProductDTO): ProductDTO {
         val entity = product.toEntity()
         productValidator.validate(entity)
 

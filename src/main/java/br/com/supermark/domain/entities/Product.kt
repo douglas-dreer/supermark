@@ -17,20 +17,20 @@ data class Product(
     @Column(nullable = false)
     var name: String = "",
 
-    @Column(name = "barcode")  // ← MUDANÇA AQUI
+    @Column(name = "barcode")
     val barCode: String? = null,
 
-    @Column(name = "qrcode")   // ← MUDANÇA AQUI
+    @Column(name = "qrcode")
     val qrCode: String? = null,
 
     @Column(nullable = false)
     var price: BigDecimal = BigDecimal.ZERO,
 
-    @CreationTimestamp  // ← MUDANÇA AQUI
+    @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     val createdAt: LocalDateTime? = null,
 
-    @UpdateTimestamp    // ← MUDANÇA AQUI
+    @UpdateTimestamp
     @Column(name = "updated_at")
     val updatedAt: LocalDateTime? = null
 

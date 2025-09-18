@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 class DeleteProductByIdUseCase(
     private val productRepository: ProductRepositoryPort
 ) {
-    fun execute(productId: Long): Unit {
+    fun execute(productId: Long) {
         validate(productId)
         return productRepository.deleteById(productId)
     }

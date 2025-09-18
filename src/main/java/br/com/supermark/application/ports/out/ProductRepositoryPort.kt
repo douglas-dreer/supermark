@@ -7,6 +7,6 @@ interface ProductRepositoryPort {
     fun findById(productId: Long): Product?
     fun findByBarCode(barcode: String): Product?
     fun save(product: Product): Product
-    fun deleteById(productId: Long): Unit
+    fun deleteById(productId: Long)
     fun existsById(productId: Long): Boolean
 }
